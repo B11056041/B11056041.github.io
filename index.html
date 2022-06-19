@@ -6,10 +6,179 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        @media (min-width:700px) {
+            body {
+                background-color: greenyellow;
+            }
+            article {
+                float: left;
+                width: 70%;
+            }
+            aside {
+                float: right;
+                width: 30%;
+            }
+            footer {
+                clear: both;
+            }
+            img {
+                width: 50%;
+            }
+        }
+        
+        table-wrapper {
+            margin: 50px;
+            box-shoadow: 0px 35px 50px rgba(27, 31, 49, 0.1);
+            display: block;
+            white-space: nowrap;
+        }
+        
+        table {
+            border-collapse;
+            width: 100%;
+            background-color: white;
+        }
+        
+        table td,
+        table th {
+            text-align: center;
+            padding: 10px;
+        }
+        
+        table td {
+            border-right: 2px dashed black;
+        }
+        
+        table thead th {
+            color: brown;
+            background: lightpink;
+        }
+        
+        table thead th:nth-child(2) {
+            background: lightgoldenrodyellow;
+        }
+        
+        table thead th:nth-child(3) {
+            background: lightgreen;
+        }
+        
+        table thead th:nth-child(4) {
+            background: lightblue;
+        }
+        
+        table thead th:nth-child(5) {
+            background: lightgray;
+        }
+        
+        table ul {
+            padding: 20px;
+            margin: 0;
+            text-align: left;
+        }
+        
+        table ul li {
+            border-bottom: 1px solid plum;
+            padding: 5px;
+            position: relative;
+            list-style-type: circle;
+        }
+        
+        @media(max-width:600px) {
+            table-wrapper {
+                margin: 30px 15px;
+            }
+            table thead {
+                display: none;
+            }
+            table td {
+                display: block;
+                padding: 0;
+            }
+            table td:before {
+                content: attr(data-title);
+                display: inline-block;
+                width: 100%;
+                font-weight: 500;
+                padding: 6px;
+                color: black;
+                background: pink;
+            }
+            table td:nth-child(2):before {
+                background: yellow;
+            }
+            table td:nth-child(3):before {
+                background: green;
+            }
+            table td:nth-child(4):before {
+                background: blue;
+            }
+            table td:nth-child(5):before {
+                background: gray;
+            }
+            table ul {
+                padding: 20px;
+                margin: 0;
+                text-align: center;
+            }
+            table ul li {
+                border-bottom: 1px solid plum;
+                padding: 5px;
+                position: relative;
+                list-style-type: square;
+                ;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>測試123 hello github 謝勛丞</h1>
+
+    <div class="table-wrapper">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th><a href="姓名.html">姓名</a></th>
+                    <th>生日</th>
+                    <th><a href="成就.html">成就</a></th>
+                    <th><a href="作品.html">作品</a></th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-title="姓名">
+                        <ul>
+                            <li>李安</li>
+                            <li>Ang Lee</li>
+                        </ul>
+                    </td>
+
+                    <td data-title="生日">
+                        <ul>
+                            <li>1954年10月23日</li>
+                        </ul>
+                    </td>
+                    <td data-title="成就">
+                        <ul>
+                            <li>兩屆奧斯卡金鐘獎</li>
+                            <li>兩屆金球獎</li>
+                            <li>兩屆威尼斯影展最佳影片金獅獎</li>
+                            <li>兩屆柏林影展最佳影片金熊獎</li>
+                            <li>英國電影學院獎終身成就獎</li>
+                        </ul>
+                    </td>
+                    <td data-title="作品">
+                        <ul>
+                            <li>《臥虎藏龍》</li>
+                            <li>《斷背山》</li>
+                            <li>《少年Pi的奇幻漂流》</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>
